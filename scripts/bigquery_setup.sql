@@ -32,3 +32,35 @@ OPTIONS (
   uris = ['gs://YOUR_BUCKET_NAME/raw/external_factors.csv'],
   skip_leading_rows = 1
 );
+
+-- Создание таблицы логистики (Context)
+CREATE OR REPLACE EXTERNAL TABLE `retail_raw.transport_expenses`
+OPTIONS (
+  format = 'CSV',
+  uris = ['gs://YOUR_BUCKET_NAME/raw/transport_expenses.csv'],
+  skip_leading_rows = 1
+);
+
+-- Создание таблицы остатков на складах (Context)
+CREATE OR REPLACE EXTERNAL TABLE `retail_raw.inventory`
+OPTIONS (
+  format = 'CSV',
+  uris = ['gs://YOUR_BUCKET_NAME/raw/inventory.csv'],
+  skip_leading_rows = 1
+);
+
+-- Создание таблицы клиентов (Dimension)
+CREATE OR REPLACE EXTERNAL TABLE `retail_raw.customers`
+OPTIONS (
+  format = 'CSV',
+  uris = ['gs://YOUR_BUCKET_NAME/raw/customers.csv'],
+  skip_leading_rows = 1
+);
+
+-- Создание таблицы расходов на логистику (Context)
+CREATE OR REPLACE EXTERNAL TABLE `retail_raw.transport_expenses`
+OPTIONS (
+  format = 'CSV',
+  uris = ['gs://YOUR_BUCKET_NAME/raw/transport_expenses.csv'],
+  skip_leading_rows = 1
+);

@@ -1,0 +1,11 @@
+product_id,sku_name,category,brand,base_price
+1,Smartphone,Electronics,Brand_A,1527.5
+2,Laptop,Electronics,Local_Hero,957.79
+3,Charger,Electronics,Brand_A,868.65
+4,Bread,Food,Local_Hero,235.83
+5,Milk,Food,Brand_A,1151.54
+6,Cheese,Food,Local_Hero,1953.5
+7,Apples,Food,Brand_A,1815.3
+8,T-shirt,Apparel,Brand_A,303.74
+9,Jeans,Apparel,Local_Hero,213.36
+10,Jacket,Apparel,Local_Hero,688.55

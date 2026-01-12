@@ -1,0 +1,6 @@
+store_id,store_name,city,region,format
+1,Store Kyiv #84,Kyiv,Northern,Hypermarket
+2,Store Lviv #56,Lviv,Western,Hypermarket
+3,Store Odesa #37,Odesa,Southern,Hypermarket
+4,Store Dnipro #79,Dnipro,Central,Hypermarket
+5,Store Kharkiv #84,Kharkiv,Eastern,Supermarket

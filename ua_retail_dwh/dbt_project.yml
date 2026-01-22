@@ -28,8 +28,27 @@ clean-targets:         # directories to be removed by `dbt clean`
 # In this example config, we tell dbt to build all models in the example/
 # directory as views. These settings can be overridden in the individual model
 # files using the `{{ config(...) }}` macro.
+
+# models:
+#   ua_retail_dwh:
+#     # 1. Слой Silver (Staging): Чистые данные, обычно в виде View
+#     staging:
+#       +materialized: view
+#       +schema: silver
+#       +tags: ["silver"]
+#
+#     # 2. Слой Gold (Marts): Финальные витрины, обычно в виде Table для скорости
+#     marts:
+#       +materialized: table
+#       +schema: gold
+#       +tags: ["gold"]
+
 models:
   ua_retail_dwh:
-    # Config indicated by + and applies to all files under models/example/
-    example:
+    staging:
       +materialized: view
+      +schema: retail_silver  # Теперь dbt создаст ровно этот датасет
+
+    marts:
+      +materialized: table
+      +schema: retail_gold    # А здесь будет только золото

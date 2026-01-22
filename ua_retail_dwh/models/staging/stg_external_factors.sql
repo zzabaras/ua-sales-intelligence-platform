@@ -3,10 +3,8 @@ with source as (
   )
 
 select
-    cast(date as date) as date,
-    cast(usd_rate as numeric) as usd_rate,
+    cast(date as date) as report_date,
+    cast(usd_rate as numeric) as exchange_rate_uah_usd,
     cast(fuel_price as numeric) as fuel_price,
     cast(avg_temp as numeric) as average_temperature_celsius
 from source
-
-    

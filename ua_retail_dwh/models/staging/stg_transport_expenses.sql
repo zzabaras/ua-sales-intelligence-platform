@@ -5,6 +5,7 @@ select
     cast(date as date) as expense_date,
     cast(store_id as int64) as store_id,
     cast(fuel_price_at_moment as numeric) as fuel_price_at_moment,
-    cast(transport_cost as numeric) as transport_cost,
+    cast(transport_cost as numeric) as logistics_cost_uah,
     trim(delivery_status) as delivery_status
 from source
+
